@@ -1,3 +1,4 @@
 #!/bin/bash
-cut -d ":" -f1,6 /etc/passwd | sort
+echo "Users and their home directories:"
+awk -F':' '{print $1,$6}' /etc/passwd | sort
 
